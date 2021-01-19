@@ -19,8 +19,8 @@ class Command(BaseCommand):
         ]
         folder_to_rename = 'root'
 
-        for file in files_to_rename:
-            with open(file, 'r') as file:
+        for f in files_to_rename:
+            with open(f, 'r') as file:
                 filedata = file.read()
 
             filedata = filedata.replace(folder_to_rename, new_project_name)
